@@ -1,0 +1,14 @@
+.logo {
+  color: var(--accent-color);
+  font-family: Raleway, cursive;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  display: inline-block;
+  &--header {
+    color: #000000;
+  }
+  &--footer {
+    color: var(--main-white-color);
+  }
+}

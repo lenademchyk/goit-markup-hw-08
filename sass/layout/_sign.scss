@@ -1,0 +1,59 @@
+.sign {
+  padding-top: 72px;
+  padding-bottom: 94px;
+  margin-left: auto;
+}
+
+.sign__title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: var(--main-white-color);
+  margin-bottom: 20px;
+}
+
+.sign-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sign-wrap__input {
+  width: 358px;
+  height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  color: var(--main-white-color);
+  font-size: 16px;
+  line-height: 1.25;
+  padding-left: 16px;
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+  }
+}
+
+.sign-wrap__send-btn {
+  padding-left: 29px;
+  display: flex;
+  margin-left: 12px;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.sign-wrap__btn {
+  position: relative;
+}
+
+.sign-wrap__icon {
+  position: absolute;
+  display: inline-block;
+  fill: var(--main-white-color);
+  right: 28px;
+  top: 50%;
+  transform: translateY(-50%);
+}

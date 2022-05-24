@@ -1,0 +1,83 @@
+.btn {
+  min-width: 200px;
+  height: 50px;
+  color: var(--main-white-color);
+  background-color: var(--accent-color);
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  text-align: center;
+  align-items: center;
+  letter-spacing: 0.06em;
+  border: 0;
+  border-radius: 4px;
+  /* display: inline-block; */
+}
+
+.btn--hero {
+  padding: 10px 32px;
+  margin-top: var(--card-set-gap);
+  border: 0;
+  display: inline-block;
+
+  transition-property: var(--second-accent-color);
+  transition-duration: var(--cubic);
+  transition-timing-function: linear;
+
+  /* transition: color var(--time-delay) var(--cubic),
+    background-color var(--time-delay) var(--cubic); */
+  &:hover,
+  &:focus {
+    color: var(--main-white-color);
+    background-color: var(--second-accent-color);
+  }
+}
+
+.button-list {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+  .button-list__item {
+    margin-right: 8px;
+    &:last-child {
+      margin-right: 0px;
+    }
+  }
+}
+
+.button-list__filter {
+  color: var(--title-text-color);
+  background-color: var(--secondary-bg-color);
+  font-weight: 500;
+  line-height: 1.62;
+  min-width: 73px;
+  height: 38px;
+  padding: 6px 22px;
+  transition: color var(--time-delay) var(--cubic),
+    background-color var(--time-delay) var(--cubic),
+    box-shadow var(--time-delay) var(--cubic);
+  &:hover,
+  &:focus {
+    color: var(--main-white-color);
+    background-color: var(--accent-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
+  &.current {
+    color: var(--main-white-color);
+    background-color: var(--accent-color);
+  }
+}
+
+.modal__send-btn {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 51px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  &:hover {
+    background: var(--second-accent-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    transition: background var(--time-delay) var(--cubic);
+  }
+}

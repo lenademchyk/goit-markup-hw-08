@@ -4,5 +4,7 @@
 }
 
 .footer-nav {
-  display: flex;
+  @media screen and (min-width: 1200px) {
+    display: flex;
+  }
 }

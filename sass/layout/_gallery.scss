@@ -1,6 +1,14 @@
+.gallery-section {
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
+}
+
 .gallery-list {
-  display: flex;
-  margin-right: calc(-1 * var(--card-set-gap));
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    margin-right: calc(-1 * var(--card-set-gap));
+  }
 }
 
 .gallery__title {

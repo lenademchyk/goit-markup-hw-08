@@ -1,21 +1,22 @@
 .contacts {
   width: 100%;
-  @media screen and (min-width: 480px) {
-    justify-content: center;
+  justify-content: center;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  // @media screen and (min-width: 480px) {
+
+  // }
+  @media screen and (min-width: 768px) {
   }
-  @media screen and min-width:768px {
-  }
-  @media screen and min-width:1200px {
+  @media screen and (min-width: 1200px) {
     width: 231px;
     margin-right: 70px;
   }
-  padding-top: 60px;
-  padding-bottom: 60px;
 }
 
 .contacts-list {
   margin-top: 20px;
-  justify-content: center;
+  // justify-content: center;
   .contacts-list__address-link {
     color: var(--main-white-color);
     font-style: normal;

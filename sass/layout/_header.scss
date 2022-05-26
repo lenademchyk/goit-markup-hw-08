@@ -3,11 +3,11 @@
 }
 
 .heder-nav {
-  // @media screen and (min-width: 1200px)
-  display: flex;
-  align-items: center;
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: center;
+  }
 }
-
 .heder-nav__logo {
   @media screen and (min-width: 480px) {
     padding-top: 16px;

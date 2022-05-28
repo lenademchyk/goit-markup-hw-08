@@ -1,15 +1,24 @@
 .header {
+  width: 100%;
   border-bottom: 1px solid #ececec;
 }
+//   @media screen and (max-width: 767px) {
+//     height: 60px;
+//   }
+// }
 
 .heder-nav {
-  @media screen and (min-width: 1200px) {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
+  @media screen and (max-width: 1199px) {
+    justify-content: space-between;
   }
 }
+
 .heder-nav__logo {
-  @media screen and (min-width: 480px) {
+  @media screen and (max-width: 767px) {
+    display: inline-flex;
+    align-items: center;
     padding-top: 16px;
     padding-bottom: 16px;
   }
@@ -24,9 +33,11 @@
 }
 
 .menu-nav {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
   @media screen and (min-width: 768px) {
     display: flex;
-    margin-left: 84px;
   }
   @media screen and (min-width: 1200px) {
     display: flex;
@@ -71,26 +82,31 @@
 
 /* ---------Contacts-in header------------------------------------ */
 
-.contacts-nav {
-  @media screen and (min-width: 768px) {
-    display: block;
-    margin-left: auto;
-    padding-top: 21px;
-    padding-bottom: 21px;
+.contacts-nav__item {
+  @media screen and (max-width: 1199px) {
+    &:not(:last-child) {
+      padding-bottom: 10px;
+    }
+  }
+}
 
+.contacts-nav {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+
+  @media screen and (max-width: 1199px) {
+    // margin-left: 84px;
+    // padding-top: 21px;
+    // padding-bottom: 21px;
     .link {
       color: inherit;
       font-weight: 500;
       font-size: 12px;
       line-height: 1.16;
       letter-spacing: 0.02em;
-      padding-bottom: 10px;
-
-      // display: flex;
-      // padding-top: var(--small-padding-gap);
-      // padding-bottom: var(--small-padding-gap);
-      // justify-content: flex-end;
-      // align-items: center;
+      display: flex;
+      align-items: center;
     }
   }
   @media screen and (min-width: 1200px) {
@@ -103,13 +119,14 @@
     .link {
       color: inherit;
       font-weight: 500;
+      font-size: 14px;
       line-height: 1.14;
       letter-spacing: 0.02em;
-      display: flex;
+      display: inline-flex;
       padding-top: var(--small-padding-gap);
       padding-bottom: var(--small-padding-gap);
-      justify-content: center;
       align-items: center;
+
       transition: color var(--time-delay) var(--cubic);
       &:hover,
       &:focus {
@@ -122,6 +139,7 @@
     }
   }
 }
+
 .contacts-nav__icon {
   fill: var(--primary-text-color);
 

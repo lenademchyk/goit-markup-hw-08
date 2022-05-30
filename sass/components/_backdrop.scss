@@ -9,6 +9,9 @@
   .is-hidden .modal {
     transform: scale(0.5);
   }
+  // @media screen and (orientation: landscape) {
+  //   overflow-y: auto;
+  // }
 }
 
 .is-hidden {

@@ -251,13 +251,13 @@ ul {
 }
 
 .modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
   background-color: var(--main-white-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   padding: 40px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
   transform: translate(-50%, -50%) scale(1);
   transition: transform var(--time-delay);
 }
@@ -266,9 +266,14 @@ ul {
     min-width: 528px;
   }
 }
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 767px) {
   .modal {
     max-width: 450px;
+  }
+}
+@media screen and (orientation: landscape) {
+  .modal {
+    overflow-y: auto;
   }
 }
 
@@ -445,6 +450,68 @@ ul {
   .contacts-nav__icon {
     margin-right: 10px;
   }
+}
+
+@media screen and (max-width: 767px) {
+  .mob-menu__open-btn {
+    top: 10px;
+    right: 10px;
+    bottom: 10px;
+    margin-left: auto;
+    width: 40px;
+    height: 40px;
+    background-color: var(--main-white-color);
+    fill: #000000;
+    transition: fill var(--time-delay) var(--cubic);
+  }
+  .mob-menu__open-btn:hover, .mob-menu__open-btn:focus {
+    fill: var(--accent-color);
+  }
+  .mob-menu__open-icon .mob-menu__open-btn {
+    display: inline-block;
+    fill: #000000;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 768px) {
+  .mob-menu__open-btn {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .mob-menu {
+    position: fixed;
+    z-index: 1;
+    background-color: var(--main-white-color);
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    padding: 48px 40px;
+    overflow-y: auto;
+  }
+}
+
+.mob-menu__close-btn {
+  position: absolute;
+  top: 21px;
+  right: 25px;
+  width: 19px;
+  height: 19px;
+  background-color: var(--main-white-color);
+  fill: currentColor;
+  transition: fill var(--time-delay) var(--cubic);
+}
+.mob-menu__close-btn:hover, .mob-menu__close-btn:focus {
+  fill: var(--accent-color);
+}
+.mob-menu__close-icon .mob-menu__close-btn {
+  display: inline-block;
+  width: 11px;
+  height: 11px;
+  fill: currentColor;
+  align-items: center;
 }
 
 .hero {
@@ -1139,12 +1206,6 @@ ul {
   padding-top: 20px;
   padding-bottom: 30px;
 }
-@media screen and (min-width: 768px) {
-  .modal-checkbox {
-    padding-left: 12px;
-  }
-}
-
 .modal-checkbox__input {
   transition: border-color var(--time-delay) var(--cubic);
 }
@@ -1163,6 +1224,7 @@ ul {
   display: flex;
   color: var(--primary-text-color);
   align-items: center;
+  justify-content: center;
 }
 
 .modal-checkbox__conditions span {

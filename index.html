@@ -25,6 +25,91 @@
           <a href="./index.html" lang="en" class="logo"
             >Web<span class="heder-nav__logo logo logo--header">Studio</span></a
           >
+          <!-- -----------open-button-mob-menu ------------------->
+          <button type="button" class="mob-menu__open-btn">
+            <svg class="mob-menu__open-icon" width="40" height="40">
+              <use href="./images/icons.svg#icon-menu-open_btn"></use>
+            </svg>
+          </button>
+
+          <!-- -------------------mobile menu------------------ -->
+
+          <div class="mob-menu is-hidden" data-menu>
+            <div class="mob-menu-top">
+              <button type="button" class="mob-menu__close-btn">
+                <svg class="mob-menu__close-icon" width="19" height="19">
+                  <use href="./images/icons.svg#icon-close_btn"></use>
+                </svg>
+              </button>
+              <!-- <nav class="navigation"></nav> -->
+              <ul class="mob-menu-nav">
+                <li class="mob-menu-nav__item">
+                  <a href="./index.html" class="mob-menu-nav__link link current"
+                    >Студия</a
+                  >
+                </li>
+                <li class="mob-menu-nav__item">
+                  <a href="./portfolio.html" class="mob-menu-nav__link link"
+                    >Портфолио</a
+                  >
+                </li>
+                <li class="mob-menu-nav__item">
+                  <a href="" class="mob-menu-nav__link link">Контакты</a>
+                </li>
+              </ul>
+            </div>
+            <div class="mob-menu-bottom">
+              <ul class="mob-contacts-nav">
+                <li class="mob-contacts-nav__item">
+                  <a
+                    href="tel:+380961111111"
+                    class="mob-contacts-nav__link link"
+                    ><svg class="mob-contacts-nav__icon" width="10" height="16">
+                      <use href="./images/icons.svg#icon-smartphone"></use></svg
+                    >+38 096 111 11 11</a
+                  >
+                </li>
+                <li class="mob-contacts-nav__item">
+                  <a
+                    href="mailto:info@devstudio.com"
+                    class="mob-contacts-nav__link link"
+                    ><svg class="mob-contacts-nav__icon" width="16" height="12">
+                      <use href="./images/icons.svg#icon-envelope"></use>
+                    </svg>
+                    info@devstudio.com</a
+                  >
+                </li>
+              </ul>
+              <ul class="mob-soc-list">
+                <li class="mob-soc-list__item">
+                  <a href="" class="mob-soc-list__link"
+                    ><svg class="mob-soc-list__icon" width="20" height="20">
+                      <use href="./images/icons.svg#icon-instagram"></use></svg
+                  ></a>
+                </li>
+                <li class="mob-soc-list__item">
+                  <a href="" class="mob-soc-list__link"
+                    ><svg class="mob-soc-list__icon" width="20" height="20">
+                      <use href="./images/icons.svg#icon-twitter"></use></svg
+                  ></a>
+                </li>
+                <li class="mob-soc-list__item">
+                  <a href="" class="mob-soc-list__link"
+                    ><svg class="mob-soc-list__icon" width="20" height="20">
+                      <use href="./images/icons.svg#icon-facebook"></use></svg
+                  ></a>
+                </li>
+                <li class="mob-soc-list__item">
+                  <a href="" class="mob-soc-list__link"
+                    ><svg class="mob-soc-list__icon" width="20" height="20">
+                      <use href="./images/icons.svg#icon-linkedin"></use></svg
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- --------finish mob menu ---------------------------->
+          <!--------------main-navigation-tablet+desktop -->
           <nav class="navigation"></nav>
           <ul class="menu-nav">
             <li class="menu-nav__item">
@@ -470,7 +555,7 @@
       <div class="modal">
         <button type="button" class="modal__close-btn" data-modal-close>
           <svg class="modal__close-icon" width="11" height="11">
-            <use href="./images/icons.svg#icon-Vector-1"></use>
+            <use href="./images/icons.svg#icon-close_btn"></use>
           </svg>
         </button>
         <p class="modal__title">Оставьте свои данные, мы вам перезвоним</p>
@@ -542,8 +627,8 @@
               value="policy-check"
               required
             />
-            <label for="input-check" class="modal-checkbox__conditions"
-              ><span
+            <label for="input-check" class="modal-checkbox__conditions">
+              <span
                 ><svg class="modal-checkbox__icon" width="11" height="8">
                   <use href="./images/icons.svg#icon-check"></use></svg
               ></span>
@@ -551,13 +636,14 @@
                 href=""
                 class="modal-checkbox__policy"
                 >Условия договора</a
-              ></label
-            >
+              >
+            </label>
           </div>
           <button type="submit" class="modal__send-btn btn">Отправить</button>
         </form>
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

@@ -89,7 +89,6 @@
   padding-top: 20px;
   padding-bottom: 30px;
   @media screen and (min-width: 768px) {
-    padding-left: 12px;
   }
 }
 
@@ -115,6 +114,7 @@
   display: flex;
   color: var(--primary-text-color);
   align-items: center;
+  justify-content: center;
 }
 
 .modal-checkbox__conditions span {

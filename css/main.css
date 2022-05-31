@@ -243,6 +243,11 @@ ul {
 .backdrop .is-hidden .modal {
   transform: scale(0.5);
 }
+@media screen and (orientation: landscape) {
+  .backdrop {
+    overflow-y: auto;
+  }
+}
 
 .is-hidden {
   opacity: 0;
@@ -264,17 +269,17 @@ ul {
 }
 @media screen and (max-width: 480px) {
   .modal {
-    width: 100vw;
+    width: calc(100% - 30px);
   }
 }
 @media screen and (min-width: 320px) and (max-width: 1199px) {
   .modal {
-    min-width: 450px;
+    max-width: 450px;
   }
 }
 @media screen and (min-width: 1200px) {
   .modal {
-    min-width: 528px;
+    max-width: 528px;
   }
 }
 @media screen and (orientation: landscape) {
@@ -481,16 +486,14 @@ ul {
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 480px) {
   .mob-menu {
     position: fixed;
-    z-index: 5;
     background-color: var(--main-white-color);
     top: 0;
     left: 0;
-    bottom: -1px;
     width: 100vw;
-    min-height: 768px;
+    height: 100%;
     padding: 48px 40px;
     overflow-y: auto;
   }
@@ -540,7 +543,7 @@ ul {
 }
 
 .mob-menu-nav__item:last-child {
-  margin-bottom: 305px;
+  margin-bottom: 300px;
 }
 
 .mob-contacts-nav__item:not(:last-child) {
@@ -575,6 +578,20 @@ ul {
   padding-top: 64px;
 }
 
+.mob-soc-list__item {
+  position: relative;
+}
+
+.mob-soc-list__item::after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 1px;
+  height: 100%;
+  background-color: rgba(33, 33, 33, 0.2);
+  margin-left: 10px;
+}
+
 .mob-soc-list__item + .mob-soc-list__item {
   margin-left: 10px;
 }
@@ -587,19 +604,6 @@ ul {
   font-size: 1.22;
   line-height: 22px;
   letter-spacing: 0.02em;
-}
-
-.mob-soc-list {
-  position: relative;
-  padding-right: 10px;
-}
-
-.mob-soc-list__item::after {
-  content: "";
-  position: absolute;
-  width: 22px;
-  height: 0px;
-  border: 1px solid rgba(33, 33, 33, 0.2);
 }
 
 .hero {
@@ -1293,13 +1297,9 @@ ul {
 .modal-checkbox {
   padding-top: 20px;
   padding-bottom: 30px;
-}
-@media screen and (max-width: 1199px) {
-  .modal-checkbox {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .modal-checkbox__input {
@@ -1318,7 +1318,8 @@ ul {
   font-size: 14px;
   line-height: 1.71;
   display: flex;
-  align-items: center;
+  align-items: baseline;
+  justify-content: center;
   color: var(--primary-text-color);
 }
 @media screen and (max-width: 1199px) {

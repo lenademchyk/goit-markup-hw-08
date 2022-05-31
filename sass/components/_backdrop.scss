@@ -8,10 +8,12 @@
   transition: opacity var(--time-delay), visibility var(--time-delay);
   .is-hidden .modal {
     transform: scale(0.5);
+
+    // overflow-y: scroll;
   }
-  // @media screen and (orientation: landscape) {
-  //   overflow-y: auto;
-  // }
+  @media screen and (orientation: landscape) {
+    overflow-y: auto;
+  }
 }
 
 .is-hidden {

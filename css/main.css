@@ -578,22 +578,13 @@ ul {
   padding-top: 64px;
 }
 
-.mob-soc-list__item {
-  position: relative;
-}
-
-.mob-soc-list__item::after {
-  position: absolute;
-  content: "";
-  display: block;
-  width: 1px;
-  height: 100%;
-  background-color: rgba(33, 33, 33, 0.2);
-  margin-left: 10px;
+.mob-soc-list__item:not(:last-child) {
+  padding-right: 10px;
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
 }
 
 .mob-soc-list__item + .mob-soc-list__item {
-  margin-left: 10px;
+  padding-left: 10px;
 }
 
 .mob-soc-list__link {
@@ -601,8 +592,8 @@ ul {
   display: flex;
   align-items: center;
   font-weight: 500;
-  font-size: 1.22;
-  line-height: 22px;
+  font-size: 18px;
+  line-height: 1.22;
   letter-spacing: 0.02em;
 }
 

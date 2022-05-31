@@ -2,10 +2,6 @@
   width: 100%;
   border-bottom: 1px solid #ececec;
 }
-//   @media screen and (max-width: 767px) {
-//     height: 60px;
-//   }
-// }
 
 .heder-nav {
   @media screen and (min-width: 768px) {
@@ -179,14 +175,13 @@
 // ---------main-mob-menu------------------
 
 .mob-menu {
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 767px) {
     position: fixed;
-
     background-color: var(--main-white-color);
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100%;
+    height: 100vw;
     padding: 48px 40px;
     overflow-y: auto;
   }
@@ -359,4 +354,7 @@
   font-size: 18px;
   line-height: 1.22;
   letter-spacing: 0.02em;
+}
+.no-scroll {
+  overflow: hidden;
 }

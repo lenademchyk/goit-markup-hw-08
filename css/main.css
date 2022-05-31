@@ -258,17 +258,23 @@ ul {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   padding: 40px;
+  min-height: 581px;
   transform: translate(-50%, -50%) scale(1);
   transition: transform var(--time-delay);
 }
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 480px) {
   .modal {
-    min-width: 528px;
+    width: 100vw;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 320px) and (max-width: 1199px) {
   .modal {
-    max-width: 450px;
+    min-width: 450px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal {
+    min-width: 528px;
   }
 }
 @media screen and (orientation: landscape) {
@@ -455,7 +461,6 @@ ul {
 @media screen and (max-width: 767px) {
   .mob-menu__open-btn {
     top: 10px;
-    right: 10px;
     bottom: 10px;
     margin-left: auto;
     width: 40px;
@@ -493,6 +498,12 @@ ul {
   }
 }
 
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
 .mob-menu__close-btn {
   position: absolute;
   top: 21px;
@@ -508,10 +519,91 @@ ul {
 }
 .mob-menu__close-icon .mob-menu__close-btn {
   display: inline-block;
-  width: 11px;
-  height: 11px;
   fill: currentColor;
   align-items: center;
+}
+
+.mob-menu-nav__item:not(:last-child) {
+  margin-bottom: var(--small-padding-gap);
+}
+
+.mob-menu-nav .link {
+  color: var(--title-text-color);
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.18;
+  letter-spacing: 0.02em;
+  transition: color var(--time-delay) var(--cubic);
+}
+.mob-menu-nav .link:hover, .mob-menu-nav .link:focus {
+  color: var(--accent-color);
+}
+.mob-menu-nav .link.current {
+  color: var(--accent-color);
+}
+
+.mob-menu-nav__item:last-child {
+  margin-bottom: 305px;
+}
+
+.mob-contacts-nav__item:not(:last-child) {
+  margin-bottom: var(--small-padding-gap);
+}
+
+.mob-contacts-nav .link {
+  color: inherit;
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.18;
+  letter-spacing: 0.02em;
+  display: inline-flex;
+  padding-top: var(--small-padding-gap);
+  padding-bottom: var(--small-padding-gap);
+  align-items: center;
+  transition: color var(--time-delay) var(--cubic);
+}
+.mob-contacts-nav .link:hover, .mob-contacts-nav .link:focus {
+  color: var(--accent-color);
+}
+.mob-contacts-nav .link:hover .contacts-nav__icon, .mob-contacts-nav .link:focus .contacts-nav__icon {
+  fill: var(--accent-color);
+}
+
+.mob-contacts-nav__item-tel {
+  color: var(--accent-color);
+}
+
+.mob-soc-list {
+  display: flex;
+  padding-top: 64px;
+}
+
+.mob-soc-list__item + .mob-soc-list__item {
+  margin-left: 20px;
+}
+
+.mob-soc-list__link {
+  color: var(--accent-color);
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 1.22;
+  line-height: 22px;
+  letter-spacing: 0.02em;
+}
+
+.mob-soc-list {
+  position: relative;
+}
+
+.current::after {
+  content: "";
+  position: absolute;
+  background: var(--accent-color);
+  text-decoration: col;
+  width: 22px;
+  height: 0px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
 }
 
 .hero {
@@ -1206,6 +1298,14 @@ ul {
   padding-top: 20px;
   padding-bottom: 30px;
 }
+@media screen and (max-width: 1199px) {
+  .modal-checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
 .modal-checkbox__input {
   transition: border-color var(--time-delay) var(--cubic);
 }
@@ -1222,9 +1322,14 @@ ul {
   font-size: 14px;
   line-height: 1.71;
   display: flex;
-  color: var(--primary-text-color);
   align-items: center;
-  justify-content: center;
+  color: var(--primary-text-color);
+}
+@media screen and (max-width: 1199px) {
+  .modal-checkbox__conditions {
+    font-size: 12px;
+    line-height: 1.67;
+  }
 }
 
 .modal-checkbox__conditions span {
@@ -1239,7 +1344,8 @@ ul {
 }
 
 .modal-checkbox__icon {
-  display: inline-block;
+  display: flex;
+  align-items: center;
   fill: transparent;
 }
 
@@ -1248,6 +1354,12 @@ ul {
   font-size: 14px;
   line-height: 1.71;
   color: var(--accent-color);
+}
+@media screen and (max-width: 1199px) {
+  .modal-checkbox__policy {
+    font-size: 12px;
+    line-height: 1.67;
+  }
 }
 
 /* ---інші варіанти оформлення галочки погодження з умовами договору */

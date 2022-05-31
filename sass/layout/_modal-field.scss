@@ -88,10 +88,13 @@
 .modal-checkbox {
   padding-top: 20px;
   padding-bottom: 30px;
-  @media screen and (min-width: 768px) {
+
+  @media screen and (max-width: 1199px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
-
 .modal-checkbox__input {
   transition: border-color var(--time-delay) var(--cubic);
 
@@ -112,9 +115,13 @@
   font-size: 14px;
   line-height: 1.71;
   display: flex;
-  color: var(--primary-text-color);
   align-items: center;
-  justify-content: center;
+  color: var(--primary-text-color);
+  // justify-content: center;
+  @media screen and (max-width: 1199px) {
+    font-size: 12px;
+    line-height: 1.67;
+  }
 }
 
 .modal-checkbox__conditions span {
@@ -129,7 +136,8 @@
 }
 
 .modal-checkbox__icon {
-  display: inline-block;
+  display: flex;
+  align-items: center;
   fill: transparent;
 }
 
@@ -138,6 +146,11 @@
   font-size: 14px;
   line-height: 1.71;
   color: var(--accent-color);
+
+  @media screen and (max-width: 1199px) {
+    font-size: 12px;
+    line-height: 1.67;
+  }
 }
 
 /* ---інші варіанти оформлення галочки погодження з умовами договору */

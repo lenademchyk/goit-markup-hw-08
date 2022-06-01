@@ -106,7 +106,6 @@ ul {
 
 .container {
   width: 100%;
-  max-width: 100%;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
@@ -242,6 +241,7 @@ ul {
 }
 .backdrop .is-hidden .modal {
   transform: scale(0.5);
+  overflow-y: scroll;
 }
 @media screen and (orientation: landscape) {
   .backdrop {
@@ -482,6 +482,9 @@ ul {
   }
 }
 
+.mob-menu {
+  transition: transform var(--time-delay);
+}
 @media screen and (max-width: 767px) {
   .mob-menu {
     position: fixed;
@@ -490,7 +493,7 @@ ul {
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100vw;
+    height: 100vh;
     padding: 48px 40px;
     overflow-y: auto;
   }
@@ -503,6 +506,8 @@ ul {
 
 .mob-menu__close-btn {
   position: absolute;
+  display: block;
+  margin-left: auto;
   top: 21px;
   right: 25px;
   width: 19px;
@@ -599,6 +604,7 @@ ul {
 }
 
 .hero {
+  max-width: 1600px;
   margin: 0 auto;
   text-align: center;
   background-color: #c4c4c4;
@@ -613,7 +619,6 @@ ul {
   .hero {
     padding-top: 200px;
     padding-bottom: 200px;
-    max-width: 1600px;
   }
 }
 

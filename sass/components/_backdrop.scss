@@ -9,7 +9,8 @@
   .is-hidden .modal {
     transform: scale(0.5);
 
-    // overflow-y: scroll;
+    overflow-y: scroll;
+    // overflow: hidden;
   }
   @media screen and (orientation: landscape) {
     overflow-y: auto;

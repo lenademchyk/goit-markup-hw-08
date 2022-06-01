@@ -182,7 +182,7 @@
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100vw;
+    height: 100vh;
     padding: 48px 40px;
     overflow-y: auto;
   }
@@ -192,12 +192,8 @@
   // align-items: flex-start;
 
   // transform: translate(-50%, -50%) scale(1);
-  // transition: transform var(--time-delay);
+  transition: transform var(--time-delay);
 
-  // @media screen and (max-width: 767px) {
-  //   min-width: 100%;
-  //   min-height: 796px;
-  // }
   @media screen and (min-width: 768px) {
     display: none;
   }
@@ -210,8 +206,8 @@
 // }
 .mob-menu__close-btn {
   position: absolute;
-  // display: block;
-  // margin-left: auto;
+  display: block;
+  margin-left: auto;
   top: 21px;
   right: 25px;
   width: 19px;

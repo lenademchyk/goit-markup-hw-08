@@ -1,5 +1,5 @@
 .hero {
-  max-width: 1600px;
+  max-width: 100%;
   margin: 0 auto;
   text-align: center;
   background-color: #c4c4c4;
@@ -13,14 +13,12 @@
   background-size: cover;
 
   @media screen and (max-width: 1199px) {
+    padding-top: 118px;
+    padding-bottom: 118px;
   }
-  padding-top: 118px;
-  padding-bottom: 118px;
-
   @media screen and (min-width: 1200px) {
     padding-top: 200px;
     padding-bottom: 200px;
-    // max-width: 1600px;
   }
 }
 

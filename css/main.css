@@ -604,7 +604,7 @@ ul {
 }
 
 .hero {
-  max-width: 1600px;
+  max-width: 100%;
   margin: 0 auto;
   text-align: center;
   background-color: #c4c4c4;
@@ -612,8 +612,12 @@ ul {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  padding-top: 118px;
-  padding-bottom: 118px;
+}
+@media screen and (max-width: 1199px) {
+  .hero {
+    padding-top: 118px;
+    padding-bottom: 118px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .hero {

@@ -3,21 +3,24 @@
     @content;
   }
 }
-
 @mixin tablet {
   @media screen and (min-width: 768px) {
     @content;
   }
 }
-
 @mixin tablet-2 {
   @media screen and (max-width: 1199px) {
     @content;
   }
 }
-
 @mixin desktop {
   @media screen and (min-width: 1200px) {
     @content;
   }
 }
+// @include mobile
+
+// @include tablet
+// @include tablet-2
+
+// @include desktop

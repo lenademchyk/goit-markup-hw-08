@@ -388,7 +388,7 @@ ul {
   border-radius: 2px;
 }
 
-/* ---------Contacts-in header------------------------------------ */
+/* ---------------Contacts-in header--------------------- */
 @media screen and (max-width: 1199px) {
   .contacts-nav__item:not(:last-child) {
     padding-bottom: 10px;
@@ -529,7 +529,6 @@ ul {
   font-size: 40px;
   line-height: 1.18;
   letter-spacing: 0.02em;
-  transition: color var(--time-delay) var(--cubic);
 }
 .mob-menu-nav .link:hover, .mob-menu-nav .link:focus {
   color: var(--accent-color);
@@ -549,14 +548,9 @@ ul {
 .mob-contacts-nav .link {
   color: inherit;
   font-weight: 500;
-  font-size: 34px;
-  line-height: 1.18;
   letter-spacing: 0.02em;
   display: inline-flex;
-  padding-top: var(--small-padding-gap);
-  padding-bottom: var(--small-padding-gap);
   align-items: center;
-  transition: color var(--time-delay) var(--cubic);
 }
 .mob-contacts-nav .link:hover, .mob-contacts-nav .link:focus {
   color: var(--accent-color);
@@ -566,7 +560,14 @@ ul {
 }
 
 .mob-contacts-nav__item-tel {
-  color: var(--accent-color);
+  font-size: 34px;
+  line-height: 1.18;
+  padding-bottom: var(--small-padding-gap);
+}
+
+.mob-contacts-nav__item-email {
+  font-size: 24px;
+  line-height: 1.17;
 }
 
 .mob-soc-list {

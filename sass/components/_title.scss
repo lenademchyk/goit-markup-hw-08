@@ -1,15 +1,20 @@
 .title {
   font-weight: 700;
-  // font-size: 36px;
   font-size: 28px;
   line-height: 1.18;
   text-align: center;
   color: var(--title-text-color);
 
-  @media screen and (max-width: 1199px) {
+  @include desktop {
+    font-size: 36px;
+    line-height: 1.17;
+  }
+
+  @include tablet-2 {
     padding-bottom: 30px;
   }
-  @media screen and (min-width: 1200px) {
+
+  @include desktop {
     padding-bottom: 50px;
   }
 }

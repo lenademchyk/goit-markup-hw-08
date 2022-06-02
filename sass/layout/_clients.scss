@@ -1,23 +1,23 @@
 .clients-list {
   display: flex;
   flex-wrap: wrap;
-  @media screen and (max-width: 1199px) {
+  @include tablet-2 {
     margin: -15px;
   }
 }
 
 .clients-list__item {
-  @media screen and (max-width: 1199px) {
+  width: calc((100% - 60px) / 2);
+
+  @include tablet-2 {
     margin: 15px;
   }
 
-  width: calc((100% - 60px) / 2);
-
-  @media screen and (min-width: 768px) {
+  @include tablet {
     flex-basis: calc((100% - 90px) / 3);
   }
 
-  @media screen and (min-width: 1200px) {
+  @include desktop {
     flex-basis: calc((100% - 150px) / 6);
 
     &:not(:last-child) {

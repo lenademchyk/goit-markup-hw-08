@@ -83,6 +83,12 @@ ul {
   text-align: center;
   color: var(--title-text-color);
 }
+@media screen and (min-width: 1200px) {
+  .title {
+    font-size: 36px;
+    line-height: 1.17;
+  }
+}
 @media screen and (max-width: 1199px) {
   .title {
     padding-bottom: 30px;
@@ -533,9 +539,6 @@ ul {
 .mob-menu-nav .link:hover, .mob-menu-nav .link:focus {
   color: var(--accent-color);
 }
-.mob-menu-nav .link.current {
-  color: var(--accent-color);
-}
 
 .mob-menu-nav__item:last-child {
   margin-bottom: 300px;
@@ -603,10 +606,10 @@ ul {
   margin: 0 auto;
   text-align: center;
   background-color: #c4c4c4;
-  background-image: var(--gradient), url(../images/hero-mob-1x.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  background-image: var(--gradient), url(../images/hero-mob-1x.jpg);
 }
 @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .hero {

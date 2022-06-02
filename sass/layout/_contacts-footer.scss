@@ -2,12 +2,12 @@
   padding-top: 60px;
   padding-bottom: 60px;
 
-  @media screen and (max-width: 1199px) {
+  @include tablet-2 {
     width: 100%;
     text-align: center;
   }
 
-  @media screen and (min-width: 1200px) {
+  @include desktop {
     margin-right: 70px;
   }
 }
@@ -17,7 +17,6 @@
   .contacts-list__address-link {
     color: var(--main-white-color);
     font-style: normal;
-    // margin-top: 20px;
     transition: color var(--time-delay) var(--cubic);
     &:hover,
     &:focus {
@@ -38,7 +37,7 @@
   .contacts-list__item:not(:last-child) {
     margin-bottom: 8px;
 
-    @media screen and (min-width: 1200px) {
+    @include desktop {
       margin-bottom: 9px;
     }
   }

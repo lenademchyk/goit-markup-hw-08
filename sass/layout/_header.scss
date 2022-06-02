@@ -229,9 +229,9 @@
     &:focus {
       color: var(--accent-color);
     }
-    &.current {
-      color: var(--accent-color);
-    }
+    // &.current {
+    //   color: var(--accent-color);
+    // }
   }
 }
 .mob-menu-nav__item:last-child {

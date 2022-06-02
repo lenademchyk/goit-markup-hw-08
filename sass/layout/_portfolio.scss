@@ -21,7 +21,6 @@
 }
 .portfolio-card {
   background: var(--main-white-color);
-  border: 1px solid #eeeeee;
   transition: box-shadow var(--time-delay) var(--cubic);
   @media screen and (max-width: 767px) {
     &:not(:last-child) {
@@ -109,4 +108,7 @@
 
 .portfolio-card__description {
   padding: 20px 24px;
+  border-right: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
 }

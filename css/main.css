@@ -171,8 +171,6 @@ ul {
   transition-property: var(--second-accent-color);
   transition-duration: var(--cubic);
   transition-timing-function: linear;
-  /* transition: color var(--time-delay) var(--cubic),
-    background-color var(--time-delay) var(--cubic); */
 }
 .btn--hero:hover, .btn--hero:focus {
   color: var(--main-white-color);
@@ -930,7 +928,6 @@ ul {
 
 .portfolio-card {
   background: var(--main-white-color);
-  border: 1px solid #eeeeee;
   transition: box-shadow var(--time-delay) var(--cubic);
 }
 @media screen and (max-width: 767px) {
@@ -1012,6 +1009,9 @@ ul {
 
 .portfolio-card__description {
   padding: 20px 24px;
+  border-right: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
 }
 
 .footer {

@@ -24,8 +24,8 @@
   transition-duration: var(--cubic);
   transition-timing-function: linear;
 
-  /* transition: color var(--time-delay) var(--cubic),
-    background-color var(--time-delay) var(--cubic); */
+  // transition: color var(--time-delay) var(--cubic),
+  //   background-color var(--time-delay) var(--cubic);
   &:hover,
   &:focus {
     color: var(--main-white-color);

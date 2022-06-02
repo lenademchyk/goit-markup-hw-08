@@ -155,7 +155,7 @@ ul {
 
 .btn {
   min-width: 200px;
-  min-height: 50px;
+  height: 50px;
   color: var(--main-white-color);
   background-color: var(--accent-color);
   font-family: inherit;
@@ -204,12 +204,12 @@ ul {
 }
 
 .button-list__filter {
+  min-width: 73px;
+  height: 38px;
   color: var(--title-text-color);
   background-color: var(--secondary-bg-color);
   font-weight: 500;
   line-height: 1.62;
-  min-width: 73px;
-  height: 38px;
   padding: 6px 22px;
   transition: color var(--time-delay) var(--cubic), background-color var(--time-delay) var(--cubic), box-shadow var(--time-delay) var(--cubic);
 }
@@ -904,12 +904,6 @@ ul {
   fill: var(--accent-color);
 }
 
-@media screen and (min-width: 768px) {
-  .portfolio {
-    display: flex;
-    flex-wrap: wrap;
-  }
-}
 @media screen and (max-width: 767px) {
   .portfolio {
     margin-top: 40px;
@@ -917,6 +911,8 @@ ul {
 }
 @media screen and (min-width: 768px) {
   .portfolio {
+    display: flex;
+    flex-wrap: wrap;
     margin-top: 30px;
     margin-right: calc(-1 * var(--card-set-gap));
     margin-bottom: calc(-1 * var(--card-set-gap));
@@ -931,6 +927,7 @@ ul {
 }
 
 .portfolio-card {
+  display: flex;
   background: var(--main-white-color);
   transition: box-shadow var(--time-delay) var(--cubic);
 }
@@ -996,26 +993,30 @@ ul {
   transform: translate(0);
 }
 
+.portfolio-card__link {
+  display: flex;
+  flex-direction: column;
+}
+
 .portfolio-card__title {
   color: var(--title-text-color);
+  font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
-  font-weight: 700;
   margin-bottom: 4px;
 }
 
 .portfolio-card__item {
   font-size: 16px;
-  line-height: 1.19;
+  line-height: 1.88;
   color: var(--primary-text-color);
 }
 
 .portfolio-card__description {
+  flex-grow: 1;
   padding: 20px 24px;
-  border-right: 1px solid #eeeeee;
-  border-left: 1px solid #eeeeee;
-  border-bottom: 1px solid #eeeeee;
+  border: 1px solid #eeeeee;
 }
 
 .footer {
@@ -1216,6 +1217,7 @@ ul {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
+
 .sign-wrap__btn {
   width: 200px;
   position: relative;
@@ -1240,11 +1242,16 @@ ul {
 
 .modal__title {
   font-weight: 700;
-  font-size: 20px;
+  font-size: 30px;
   line-height: 1.15;
   text-align: center;
   margin-bottom: 12px;
   color: var(--title-text-color);
+}
+@media screen and (min-width: 1200px) {
+  .modal__title {
+    font-size: 20px;
+  }
 }
 
 .modal-field {
@@ -1306,14 +1313,20 @@ ul {
   padding: 12px 16px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-  font-size: 12px;
-  line-height: 1.17;
+  font-size: 14px;
+  line-height: 1.14;
   letter-spacing: 0.01em;
   color: var(--title-text-color);
   resize: none;
 }
 .modal-comment__text::placeholder {
   color: rgba(117, 117, 117, 0.5);
+}
+@media screen and (min-width: 1200px) {
+  .modal-comment__text {
+    font-size: 12px;
+    line-height: 1.17;
+  }
 }
 
 .modal-checkbox {

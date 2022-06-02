@@ -1,28 +1,27 @@
 .portfolio {
-  @media screen and (min-width: 768px) {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  @media screen and (max-width: 767px) {
+  @include mobile {
     margin-top: 40px;
   }
 
-  @media screen and (min-width: 768px) {
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
     margin-top: 30px;
     margin-right: calc(-1 * var(--card-set-gap));
     margin-bottom: calc(-1 * var(--card-set-gap));
   }
 
-  @media screen and (min-width: 1200px) {
+  @include desktop {
     margin-top: 50px;
     margin-right: calc(-1 * var(--card-set-gap));
     margin-bottom: calc(-1 * var(--card-set-gap));
   }
 }
 .portfolio-card {
+  display: flex;
   background: var(--main-white-color);
   transition: box-shadow var(--time-delay) var(--cubic);
-  @media screen and (max-width: 767px) {
+  @include mobile {
     &:not(:last-child) {
       margin-bottom: var(--card-set-gap);
     }
@@ -32,7 +31,7 @@
         0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
     }
   }
-  @media screen and (min-width: 768px) {
+  @include tablet {
     flex-basis: calc((100% - 60px) / 2);
     margin-right: var(--card-set-gap);
     margin-bottom: var(--card-set-gap);
@@ -43,7 +42,7 @@
         0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
     }
   }
-  @media screen and (min-width: 1200px) {
+  @include desktop {
     flex-basis: calc((100% - 90px) / 3);
     margin-right: var(--card-set-gap);
     margin-bottom: var(--card-set-gap);
@@ -91,24 +90,29 @@
   }
 }
 
+.portfolio-card__link {
+  display: flex;
+  flex-direction: column;
+}
 .portfolio-card__title {
   color: var(--title-text-color);
+  font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
-  font-weight: 700;
   margin-bottom: 4px;
 }
 
 .portfolio-card__item {
   font-size: 16px;
-  line-height: 1.19;
+  line-height: 1.88;
   color: var(--primary-text-color);
 }
 
 .portfolio-card__description {
+  flex-grow: 1;
   padding: 20px 24px;
-  border-right: 1px solid #eeeeee;
-  border-left: 1px solid #eeeeee;
-  border-bottom: 1px solid #eeeeee;
+  // border-right: 1px solid #eeeeee;
+  // border-left: 1px solid #eeeeee;
+  border: 1px solid #eeeeee;
 }

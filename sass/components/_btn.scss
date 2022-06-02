@@ -1,6 +1,6 @@
 .btn {
   min-width: 200px;
-  min-height: 50px;
+  height: 50px;
   color: var(--main-white-color);
   background-color: var(--accent-color);
   font-family: inherit;
@@ -36,11 +36,11 @@
 .button-list {
   display: flex;
   flex-wrap: wrap;
-  @media screen and (max-width: 767px) {
+  @include mobile {
     align-content: center;
     justify-content: left;
   }
-  @media screen and (min-width: 768px) {
+  @include tablet {
     justify-content: center;
   }
   // margin-bottom: 50px;
@@ -57,12 +57,12 @@
 }
 
 .button-list__filter {
+  min-width: 73px;
+  height: 38px;
   color: var(--title-text-color);
   background-color: var(--secondary-bg-color);
   font-weight: 500;
   line-height: 1.62;
-  min-width: 73px;
-  height: 38px;
   padding: 6px 22px;
   transition: color var(--time-delay) var(--cubic),
     background-color var(--time-delay) var(--cubic),

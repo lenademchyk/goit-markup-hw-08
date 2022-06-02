@@ -2,7 +2,7 @@
   padding-top: var(--padding-gap);
   padding-bottom: var(--padding-gap);
 
-  @media screen and (min-width: 1200px) {
+  @include desktop {
     padding-top: var(--big-padding-gap);
     padding-bottom: var(--big-padding-gap);
   }

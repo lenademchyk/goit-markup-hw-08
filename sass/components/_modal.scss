@@ -7,7 +7,6 @@
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   padding: 40px;
-  max-width: 100%;
   min-height: 581px;
 
   transform: translate(-50%, -50%) scale(1);
@@ -19,7 +18,7 @@
   }
 
   @include desktop {
-    max-width: 528px;
+    min-width: 528px;
   }
 }
 

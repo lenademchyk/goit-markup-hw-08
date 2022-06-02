@@ -7,6 +7,7 @@
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   padding: 40px;
+  max-width: 100%;
   min-height: 581px;
 
   transform: translate(-50%, -50%) scale(1);
@@ -18,17 +19,13 @@
   //   max-width: 450px;
   // }
 
-  @media screen and (min-width: 320px) and (max-width: 1199px) {
+  @media screen and (max-width: 1199px) {
     width: calc(100% - 30px);
     max-width: 450px;
   }
 
   @media screen and (min-width: 1200px) {
     max-width: 528px;
-  }
-
-  @media screen and (orientation: landscape) {
-    overflow-y: auto;
   }
 }
 

@@ -242,11 +242,10 @@ ul {
 }
 .backdrop .is-hidden .modal {
   transform: scale(0.5);
-  overflow-y: scroll;
 }
 @media screen and (orientation: landscape) {
   .backdrop {
-    overflow-y: auto;
+    overflow: auto;
   }
 }
 
@@ -264,11 +263,12 @@ ul {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   padding: 40px;
+  max-width: 100%;
   min-height: 581px;
   transform: translate(-50%, -50%) scale(1);
   transition: transform var(--time-delay);
 }
-@media screen and (min-width: 320px) and (max-width: 1199px) {
+@media screen and (max-width: 1199px) {
   .modal {
     width: calc(100% - 30px);
     max-width: 450px;
@@ -277,11 +277,6 @@ ul {
 @media screen and (min-width: 1200px) {
   .modal {
     max-width: 528px;
-  }
-}
-@media screen and (orientation: landscape) {
-  .modal {
-    overflow-y: auto;
   }
 }
 
@@ -605,7 +600,7 @@ ul {
 }
 
 .hero {
-  max-width: 100%;
+  max-width: 1600px;
   margin: 0 auto;
   text-align: center;
   background-color: #c4c4c4;

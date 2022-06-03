@@ -279,9 +279,10 @@
 .mob-soc-list {
   display: flex;
   flex-wrap: wrap;
-  padding-top: 64px;
-  @media screen and (max-width: 320px) {
+  margin-top: 64px;
+  @media screen and (max-width: 400px) {
     max-width: 280px;
+    padding: 0;
   }
 }
 
@@ -294,6 +295,9 @@
   padding-left: 10px;
 }
 
+.mob-soc-list__item {
+  margin-bottom: 10px;
+}
 .mob-soc-list__link {
   color: var(--accent-color);
   display: flex;

@@ -98,6 +98,7 @@
   // &:focus + .modal-checkbox__conditions span {
   //   border-color: var(--accent-color);
   // }
+
   &:checked + .modal-checkbox__conditions .modal-checkbox__icon {
     fill: var(--main-white-color);
   }

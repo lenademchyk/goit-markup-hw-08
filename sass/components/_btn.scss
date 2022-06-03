@@ -36,23 +36,18 @@
 .button-list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+
   @include mobile {
     align-content: center;
     justify-content: left;
+
+    .button-list__item:nth-child(-n + 3) {
+      margin-bottom: 15px;
+    }
   }
-  @include tablet {
-    justify-content: center;
-  }
-  // margin-bottom: 50px;
-  // margin-bottom: 40px;
-  margin: -15px -8px;
-  .button-list__item {
-    // margin-right: 8px;
-    margin: 15px 8px;
-    // &:last-child {
-    //   margin-right: 0px;
-    //   margin: -15px;
-    // }
+  .button-list__item:not(:last-child) {
+    margin-right: 8px;
   }
 }
 

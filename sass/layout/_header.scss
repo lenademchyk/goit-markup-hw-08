@@ -265,6 +265,11 @@
   font-size: 34px;
   line-height: 1.18;
   padding-bottom: var(--small-padding-gap);
+
+  @media screen and (max-width: 380px) {
+    font-size: 24px;
+    line-height: 1.17;
+  }
 }
 .mob-contacts-nav__item-email {
   font-size: 24px;
@@ -273,7 +278,11 @@
 
 .mob-soc-list {
   display: flex;
+  flex-wrap: wrap;
   padding-top: 64px;
+  @media screen and (max-width: 320px) {
+    max-width: 280px;
+  }
 }
 
 .mob-soc-list__item:not(:last-child) {

@@ -972,11 +972,11 @@ ul {
   position: absolute;
   top: 0;
   background: rgba(33, 150, 243, 0.9);
-  font-size: 18px;
+  font-size: 15px;
   line-height: 1.6;
   color: var(--main-white-color);
-  padding: 63px 24px;
-  width: 100%;
+  padding: 77px 24px;
+  max-width: 450px;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -988,6 +988,12 @@ ul {
 }
 .portfolio-card__link:hover .portfolio-card__text, .portfolio-card__link:focus .portfolio-card__text {
   transform: translate(0);
+}
+@media screen and (min-width: 1200px) {
+  .portfolio-card__text {
+    padding: 63px 24px;
+    font-size: 18px;
+  }
 }
 
 .portfolio-card__link {

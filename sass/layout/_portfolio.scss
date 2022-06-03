@@ -10,9 +10,6 @@
     margin-bottom: calc(-1 * var(--card-set-gap));
     margin-top: 30px;
   }
-  // @include tablet-2 {
-  //   margin-top: 30px;
-  // }
 
   @include desktop {
     margin-top: 50px;
@@ -73,11 +70,11 @@
   position: absolute;
   top: 0;
   background: rgba(33, 150, 243, 0.9);
-  font-size: 18px;
+  font-size: 15px;
   line-height: 1.6;
   color: var(--main-white-color);
-  padding: 63px 24px;
-  width: 100%;
+  padding: 77px 24px;
+  max-width: 450px;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -90,6 +87,10 @@
   .portfolio-card__link:hover &,
   .portfolio-card__link:focus & {
     transform: translate(0);
+  }
+  @include desktop {
+    padding: 63px 24px;
+    font-size: 18px;
   }
 }
 
